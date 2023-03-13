@@ -237,6 +237,8 @@ DomainModel PatientMoniter {
 		Doctor : Doctor Association
 		Temperatures : Temperature* Association
 		Patient : Abnormal ! Association
+		[INV]
+		inv UniquePatientId : Patient.allInstance()->isUnique(p:Patient | p.PatientId)
 	}
 
 	Entity Doctor {
@@ -245,6 +247,8 @@ DomainModel PatientMoniter {
 
 		[Refer]
 		Patients : Patient* ! Association
+		[INV]
+		inv UniqueDoctorId : Doctor.allInstance()->isUnique(d:Doctor | d.DoctorId)
 	}
 
 	Entity Temperature {
