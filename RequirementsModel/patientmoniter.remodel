@@ -1,0 +1,269 @@
+UseCaseModel PatientMoniter {
+
+	UC::uploadTemperature definedBySSD(UploadTemperatureSSD) relatedService(EdgeUploadTemperatureService , CloudUploadTemperatureService)
+
+	Actor Doctor {
+		uploadTemperature
+	}
+
+	Actor Patient {
+		uploadTemperature
+	}
+
+	Interaction UploadTemperatureSSD {
+
+		[Participants: Doctor Patient EdgeUploadTemperatureService CloudUploadTemperatureService]
+
+		CallMessage::UploadTemperatureSSDCallMessage1(uploadTemperature UploadTemperatureSSDCallMessage1SendingEnd -> UploadTemperatureSSDExecution1StartEnd)
+		CallMessage::UploadTemperatureSSDCallMessage2(createTemperature UploadTemperatureSSDCallMessage2SendingEnd -> UploadTemperatureSSDExecution2StartEnd)
+		CallMessage::UploadTemperatureSSDCallMessage3(computeAbnormal UploadTemperatureSSDCallMessage3SendingEnd -> UploadTemperatureSSDExecution3StartEnd)
+		CallMessage::UploadTemperatureSSDCallMessage4(uploadAbnormal UploadTemperatureSSDCallMessage4SendingEnd -> UploadTemperatureSSDExecution4StartEnd)
+		CallMessage::UploadTemperatureSSDCallMessage5(createAbnormal UploadTemperatureSSDCallMessage5SendingEnd -> UploadTemperatureSSDExecution5StartEnd)
+		CallMessage::UploadTemperatureSSDCallMessage6(noticeDoctor UploadTemperatureSSDCallMessage6SendingEnd -> UploadTemperatureSSDExecution6StartEnd)
+		ReturnMessage::UploadTemperatureSSDCallMessage6Return(UploadTemperatureSSDExecution6FinishEnd -> UploadTemperatureSSDCallMessage6ReturnReceivingEnd UploadTemperatureSSDCallMessage6)
+
+		Execution::UploadTemperatureSSDExecution1(EdgeUploadTemperatureService UploadTemperatureSSDExecution1StartEnd UploadTemperatureSSDExecution1FinishEnd)
+		Execution::UploadTemperatureSSDExecution2(EdgeUploadTemperatureService UploadTemperatureSSDExecution2StartEnd UploadTemperatureSSDExecution2FinishEnd)
+		Execution::UploadTemperatureSSDExecution3(EdgeUploadTemperatureService UploadTemperatureSSDExecution3StartEnd UploadTemperatureSSDExecution3FinishEnd)
+		Execution::UploadTemperatureSSDExecution4(CloudUploadTemperatureService UploadTemperatureSSDExecution4StartEnd UploadTemperatureSSDExecution4FinishEnd)
+		Execution::UploadTemperatureSSDExecution5(CloudUploadTemperatureService UploadTemperatureSSDExecution5StartEnd UploadTemperatureSSDExecution5FinishEnd)
+		Execution::UploadTemperatureSSDExecution6(CloudUploadTemperatureService UploadTemperatureSSDExecution6StartEnd UploadTemperatureSSDExecution6FinishEnd)
+
+		CombinedFragment:: combinedFragement1 -> alt {
+
+			[Participants: EdgeUploadTemperatureService CloudUploadTemperatureService Doctor Patient]
+
+			combinedFragement1StartEnd -> combinedFragement1FinishEnd
+
+			Operand::condition1(condition1End combinedFragement1FinishEnd)
+		}
+
+		MessageEnd::UploadTemperatureSSDCallMessage1SendingEnd(Patient UploadTemperatureSSDCallMessage1)
+		ExecutionEnd::UploadTemperatureSSDExecution1StartEnd(EdgeUploadTemperatureService UploadTemperatureSSDExecution1)
+		ExecutionEnd::UploadTemperatureSSDExecution1FinishEnd(EdgeUploadTemperatureService UploadTemperatureSSDExecution1)
+		MessageEnd::UploadTemperatureSSDCallMessage2SendingEnd(EdgeUploadTemperatureService UploadTemperatureSSDCallMessage2)
+		ExecutionEnd::UploadTemperatureSSDExecution2StartEnd(EdgeUploadTemperatureService UploadTemperatureSSDExecution2)
+		ExecutionEnd::UploadTemperatureSSDExecution2FinishEnd(EdgeUploadTemperatureService UploadTemperatureSSDExecution2)
+		CombinedFragmentEnd::combinedFragement1StartEnd(combinedFragement1)
+		OperandEnd::condition1End(condition1)
+		MessageEnd::UploadTemperatureSSDCallMessage3SendingEnd(EdgeUploadTemperatureService UploadTemperatureSSDCallMessage3)
+		ExecutionEnd::UploadTemperatureSSDExecution3StartEnd(EdgeUploadTemperatureService UploadTemperatureSSDExecution3)
+		ExecutionEnd::UploadTemperatureSSDExecution3FinishEnd(EdgeUploadTemperatureService UploadTemperatureSSDExecution3)
+		MessageEnd::UploadTemperatureSSDCallMessage4SendingEnd(EdgeUploadTemperatureService UploadTemperatureSSDCallMessage4)
+		ExecutionEnd::UploadTemperatureSSDExecution4StartEnd(CloudUploadTemperatureService UploadTemperatureSSDExecution4)
+		ExecutionEnd::UploadTemperatureSSDExecution4FinishEnd(CloudUploadTemperatureService UploadTemperatureSSDExecution4)
+		MessageEnd::UploadTemperatureSSDCallMessage5SendingEnd(CloudUploadTemperatureService UploadTemperatureSSDCallMessage5)
+		ExecutionEnd::UploadTemperatureSSDExecution5StartEnd(CloudUploadTemperatureService UploadTemperatureSSDExecution5)
+		ExecutionEnd::UploadTemperatureSSDExecution5FinishEnd(CloudUploadTemperatureService UploadTemperatureSSDExecution5)
+		MessageEnd::UploadTemperatureSSDCallMessage6SendingEnd(Doctor UploadTemperatureSSDCallMessage6)
+		ExecutionEnd::UploadTemperatureSSDExecution6StartEnd(CloudUploadTemperatureService UploadTemperatureSSDExecution6)
+		ExecutionEnd::UploadTemperatureSSDExecution6FinishEnd(CloudUploadTemperatureService UploadTemperatureSSDExecution6)
+		MessageEnd::UploadTemperatureSSDCallMessage6ReturnReceivingEnd(Doctor UploadTemperatureSSDCallMessage6Return)
+		CombinedFragmentEnd::combinedFragement1FinishEnd(combinedFragement1)
+
+	}
+
+	Service PatientMoniterSystem {
+
+	}
+
+	Service ThirdPartyServices {
+
+	}
+
+	Service EdgeUploadTemperatureService {
+
+		[Operation]
+		uploadTemperature(value, patientId)
+		createTemperature(value, patientId)
+		computeAbnormal()
+
+		[TempProperty]
+		CurrentPatient: Patient
+		CurrentAbnormal : Abnormal
+
+	}
+
+	Service CloudUploadTemperatureService {
+
+		[Operation]
+		uploadAbnormal(abnormal)
+		createAbnormal(abnormal)
+		noticeDoctor(abnormalPatientId)
+
+		[TempProperty]
+		AbnormalPatientId : String
+
+	}
+
+	Service CloudPatientService {
+
+		[Operation]
+		addPatient(patientId, doctorId)
+
+	}
+
+	Service CloudDoctorService {
+
+		[Operation]
+		addDoctor(doctorId)
+		getTemperature(patientId, number)
+
+	}
+
+	Contract EdgeUploadTemperatureService::createTemperature(value : Real, patientId : String) : Boolean {
+
+		definition:
+			patient:Patient = Patient.allInstance()->any(p:Patient | p.PatientId = patientId)
+
+		precondition:
+			patient.oclIsUndefined() = false
+
+		postcondition:
+			let temperature:Temperature in
+			self.CurrentPatient = patient and
+			temperature.oclIsNew() and
+			temperature.Value = value and
+			temperature.Timestamp.isEqual(Now) and
+			temperature.Patient = patient
+	}
+
+	Contract EdgeUploadTemperatureService::computeAbnormal() : Boolean {
+
+		definition:
+			avg:Set(Real) = self.CurrentPatient.Temperatures->collect(t:Temperature | t.value)
+
+		precondition:
+			true
+		postcondition:
+			let a:Abnormal in
+			a.oclIsNew() and
+			if
+				avg > 27
+			then
+				a.value = avg and
+				a.timestamp = Now() and
+				a.Patient = self.CurrentPatient and
+				self.CurrentAbnormal = a
+			endif and
+			result = true
+	}
+
+	Contract EdgeUploadTemperatureService::uploadTemperature(value : Real, patientId : String) {
+
+		precondition:
+			true
+		postcondition:
+			true
+	}
+
+	Contract CloudUploadTemperatureService::noticeDoctor(abnormalPatientId : String) : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			true
+	}
+
+	Contract CloudUploadTemperatureService::createAbnormal(abnormal : Abnormal) : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			Abnormal.allInstance()->includes(abnormal) and
+			result = true
+	}
+
+	Contract CloudUploadTemperatureService::uploadAbnormal(abnormal : Abnormal) : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			true
+	}
+
+	Contract CloudPatientService::addPatient(patientId : String, doctorId : String) : Boolean {
+
+		definition:
+			patient:Patient = Patient.allInstance()->any(p:Patient | p.PatientId = patientId),
+			doctor:Doctor = Doctor.allInstance()->any(d:Doctor | d.DoctorId = doctorId)
+
+		precondition:
+			patient.oclIsUndefined() = true and
+			doctor.oclIsUndefined() = false
+		postcondition:
+			let newPatient:Patient in
+			newPatient.oclIsNew() and
+			newPatient.PatientId = patientId and
+			newPatient.Doctor = doctor and
+			result = true
+	}
+
+	Contract CloudDoctorService::getTemperature(patientId : String, number : Real) : Set(Temperature) {
+
+		definition:
+			patient:Patient = Patient.allInstance()->any(p:Patient | p.PatientId = patientId),
+			temperatures = patient.Temperatures
+
+		precondition:
+			true
+		postcondition:
+			result = temperatures
+	}
+
+	Contract CloudDoctorService::addDoctor(doctorId : String) : Boolean {
+
+		definition:
+			doctor:Doctor = Doctor.allInstance()->any(d:Doctor | d.DoctorId = doctorId)
+
+		precondition:
+			doctor.oclIsUndefined() = false
+		postcondition:
+			let newDoctor:Doctor in
+			newDoctor.oclIsNew() and
+			newDoctor.DoctorId = doctorId and
+			result = true
+	}
+
+}
+
+DomainModel PatientMoniter {
+
+	Entity Patient {
+		Type : Cache[ENUMITEM1]
+		PatientId : String
+
+		[Refer]
+		Doctor : Doctor Association
+		Temperatures : Temperature* Association
+		Patient : Abnormal ! Association
+	}
+
+	Entity Doctor {
+		Type : Cloud[ENUMITEMS]
+		DoctorId : String
+
+		[Refer]
+		Patients : Patient* ! Association
+	}
+
+	Entity Temperature {
+		Type : Edge[ENUMITEM1]
+		Value : Real
+		Timestamp : Date
+
+		[Refer]
+		Patient : Patient ! Association
+	}
+
+	Entity Abnormal {
+		Type : Cloud[ENUMITEMS]
+		Value : Real
+		Timestamp : Date
+
+		[Refer]
+		Abnormals : Patient* Association
+	}
+
+}
+
