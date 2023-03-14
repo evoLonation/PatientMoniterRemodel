@@ -10,7 +10,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_ZfmjML22Ee27j7uVDeBvrw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ZgzdEL22Ee27j7uVDeBvrw" name="PatientMoniter Conceptual Class Diagram" repPath="#_ZghwQL22Ee27j7uVDeBvrw" changeId="df45e76d-e671-4b34-be4e-b2180e7c79b3">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ZgzdEL22Ee27j7uVDeBvrw" name="PatientMoniter Conceptual Class Diagram" repPath="#_ZghwQL22Ee27j7uVDeBvrw" changeId="8d78c668-6897-4b09-b970-8fd5295152ac">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']"/>
         <target xmi:type="rEMODEL:DomainModel" href="patientmoniter.remodel#//@DomainModel"/>
       </ownedRepresentationDescriptors>
@@ -182,28 +182,28 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OK_-Sr29Ee2TdeJY4uPSag" id="(0.0,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OK_-S729Ee2TdeJY4uPSag" id="(1.0,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_bA6gwL29Ee2TdeJY4uPSag" type="4001" element="_bA3dfL29Ee2TdeJY4uPSag" source="_LDJcgL29Ee2TdeJY4uPSag" target="_gmbb8L22Ee27j7uVDeBvrw">
-          <children xmi:type="notation:Node" xmi:id="_bA6gxL29Ee2TdeJY4uPSag" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bA6gxb29Ee2TdeJY4uPSag" x="11" y="-3"/>
+        <edges xmi:type="notation:Edge" xmi:id="_30kcIMIMEe2QVvT0_kOCGQ" type="4001" element="_30gxxsIMEe2QVvT0_kOCGQ" source="_gmbb8L22Ee27j7uVDeBvrw" target="_LDJcgL29Ee2TdeJY4uPSag">
+          <children xmi:type="notation:Node" xmi:id="_30kcJMIMEe2QVvT0_kOCGQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_30kcJcIMEe2QVvT0_kOCGQ" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_bA6gxr29Ee2TdeJY4uPSag" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bA6gx729Ee2TdeJY4uPSag" x="-5"/>
+          <children xmi:type="notation:Node" xmi:id="_30kcJsIMEe2QVvT0_kOCGQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_30kcJ8IMEe2QVvT0_kOCGQ" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_bA6gyL29Ee2TdeJY4uPSag" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bA6gyb29Ee2TdeJY4uPSag" x="-6"/>
+          <children xmi:type="notation:Node" xmi:id="_30kcKMIMEe2QVvT0_kOCGQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_30kcKcIMEe2QVvT0_kOCGQ" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_bA6gwb29Ee2TdeJY4uPSag"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_bA6gwr29Ee2TdeJY4uPSag" fontName="Microsoft YaHei UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bA6gw729Ee2TdeJY4uPSag" points="[0, 0, 0, 130]$[0, -130, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bA6gyr29Ee2TdeJY4uPSag" id="(0.5714285714285714,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bA6gy729Ee2TdeJY4uPSag" id="(0.3673469387755102,1.0)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_30kcIcIMEe2QVvT0_kOCGQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_30kcIsIMEe2QVvT0_kOCGQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_30kcI8IMEe2QVvT0_kOCGQ" points="[0, 0, 20, -183]$[-20, 183, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_30lDMMIMEe2QVvT0_kOCGQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_30lDMcIMEe2QVvT0_kOCGQ" id="(0.5,0.5)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ZjvcUL22Ee27j7uVDeBvrw" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_ZjvcUb22Ee27j7uVDeBvrw"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_gmV8YL22Ee27j7uVDeBvrw" name="Patient" outgoingEdges="_ErNDA729Ee2TdeJY4uPSag _OK9iA729Ee2TdeJY4uPSag" incomingEdges="_bA3dfL29Ee2TdeJY4uPSag" width="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_gmV8YL22Ee27j7uVDeBvrw" name="Patient" outgoingEdges="_ErNDA729Ee2TdeJY4uPSag _OK9iA729Ee2TdeJY4uPSag _30gxxsIMEe2QVvT0_kOCGQ" width="10">
       <target xmi:type="rEMODEL:Entity" href="patientmoniter.remodel#//@DomainModel/@entity.0"/>
       <semanticElements xmi:type="rEMODEL:Entity" href="patientmoniter.remodel#//@DomainModel/@entity.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -305,7 +305,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_LDGZML29Ee2TdeJY4uPSag" name="Abnormal" outgoingEdges="_bA3dfL29Ee2TdeJY4uPSag" width="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_LDGZML29Ee2TdeJY4uPSag" name="Abnormal" incomingEdges="_30gxxsIMEe2QVvT0_kOCGQ" width="10">
       <target xmi:type="rEMODEL:Entity" href="patientmoniter.remodel#//@DomainModel/@entity.3"/>
       <semanticElements xmi:type="rEMODEL:Entity" href="patientmoniter.remodel#//@DomainModel/@entity.3"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -348,16 +348,6 @@
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']/@conditionnalStyles.0/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_fl_1h729Ee2TdeJY4uPSag" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_fl_1iL29Ee2TdeJY4uPSag" showIcon="false"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_bA3dfL29Ee2TdeJY4uPSag" sourceNode="_LDGZML29Ee2TdeJY4uPSag" targetNode="_gmV8YL22Ee27j7uVDeBvrw" beginLabel="Patient:1" endLabel="Abnormals:*">
-      <target xmi:type="rEMODEL:Reference" href="patientmoniter.remodel#//@DomainModel/@entity.3/@reference.0"/>
-      <semanticElements xmi:type="rEMODEL:Reference" href="patientmoniter.remodel#//@DomainModel/@entity.3/@reference.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_eMGqbL29Ee2TdeJY4uPSag" targetArrow="NoDecoration" size="0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']/@conditionnalStyles.0/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_eMGqbb29Ee2TdeJY4uPSag" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_eMGqbr29Ee2TdeJY4uPSag" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']"/>
     </ownedDiagramElements>
@@ -420,6 +410,16 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='EnumEntity']/@subNodeMappings[name='EnumItem']"/>
       </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_30gxxsIMEe2QVvT0_kOCGQ" sourceNode="_gmV8YL22Ee27j7uVDeBvrw" targetNode="_LDGZML29Ee2TdeJY4uPSag" beginLabel="Patient:1" endLabel="Abnormals:*">
+      <target xmi:type="rEMODEL:Reference" href="patientmoniter.remodel#//@DomainModel/@entity.0/@reference.2"/>
+      <semanticElements xmi:type="rEMODEL:Reference" href="patientmoniter.remodel#//@DomainModel/@entity.0/@reference.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_30hY0MIMEe2QVvT0_kOCGQ" targetArrow="NoDecoration" size="0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']/@conditionnalStyles.0/@style"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_30hY0cIMEe2QVvT0_kOCGQ" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_30hY0sIMEe2QVvT0_kOCGQ" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_ZgpFAL22Ee27j7uVDeBvrw"/>

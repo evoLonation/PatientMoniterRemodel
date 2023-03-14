@@ -236,7 +236,7 @@ DomainModel PatientMoniter {
 		[Refer]
 		Doctor : Doctor Association
 		Temperatures : Temperature* Association
-		Patient : Abnormal ! Association
+		Abnormals : Abnormal* Association
 		[INV]
 		inv UniquePatientId : Patient.allInstance()->isUnique(p:Patient | p.PatientId)
 	}
@@ -266,7 +266,7 @@ DomainModel PatientMoniter {
 		Timestamp : Date
 
 		[Refer]
-		Abnormals : Patient* Association
+		Patient : Patient ! Association
 	}
 
 }
